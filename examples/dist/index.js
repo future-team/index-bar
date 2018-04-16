@@ -108,6 +108,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _classCallCheck(this, IndexBar);
 	
 	        var defaultOpts = {
+	            containerClassName: 'idx-bar-container',
 	            chars: ['热门', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
 	            fontScale: 0.7,
 	            top: 60,
@@ -125,7 +126,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var top = options.top;
 	        var bottom = options.bottom;
 	        var chars = options.chars;
+	        var containerClassName = options.containerClassName;
 	
+	        $container.className = containerClassName;
 	        var containerStyle = {
 	            position: 'fixed',
 	            top: top + 'px',

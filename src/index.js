@@ -15,6 +15,7 @@ function getChat(chars,percent) {
 export default class IndexBar {
     constructor(opts) {
         let defaultOpts = {
+            containerClassName:'idx-bar-container',
             chars: ['热门', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
             fontScale: 0.7,
             top: 60,
@@ -31,8 +32,8 @@ export default class IndexBar {
         let $container = document.createElement('div')
         this.$container = $container
         let { options } = this
-        let { top, bottom, chars } = options
-
+        let { top, bottom, chars, containerClassName} = options
+        $container.className=containerClassName
         let containerStyle = {
             position: 'fixed',
             top: `${top}px`,
